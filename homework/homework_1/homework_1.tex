@@ -211,29 +211,33 @@ Sample = 10million
 
 \subsection*{b}
 
-Null hypothesis is 43\% vote for Roosevelt.\\
-Alternate hypothesis is that Roosevelt should be getting more votes\\
+Null hypothesis is 61\% of the population voted for Roosevelt.\\
+Alternate hypothesis from sample suggest that the population should be smaller\\
 
-$H_0: \mu=0.43$
+$H_0: p=0.61$
 
-$H_{A}: \mu>0.43$
+$H_{A}: \hat{p}<0.61$
 
 \subsection*{c}
 
+Note that for this question we can model the problem as a binomial proportion 
+since in this problem, the person can either vote or not vote for
+Roosevelt. Since in this problem n is reduced to 100, we can still assume that
+the distribution is approximately normal since $n>30$.
+
 \[
-    Z = \frac{\bar{x} - \mu_0}{\frac{\sigma}{\sqrt{n}}}
+    Z = \frac{\bar{p} - p_0}{\frac{p_0 q_0}{\sqrt{n}}}
 \]
 
-For a significance level of 1\%, the critical value is 2.326 for a right tail
+For a significance level of 1\%, the critical value is -2.326 for a left tail
 test.
 
 \[
-    \sigma = \frac{\bar{x} - \mu_0}{Z} \times \sqrt{n}
+    Z = \frac{0.43 - 0.61}{\sqrt{\frac{0.61*0.39}{100}}} = -3.69
 \]
 
-We can reorder the formula and find that when n is large at 10million, the
-standard deviation is huge, but when n is smaller at 100, then the
-standard deviation is small at 0.86 making the sample more likely to be
-a chance error.
+We assume that the $H_0$ is true, that is $p_0=0.61$ and we compute the Z score.
+Since the Z score falls in the rejection region, we should reject $H_0$ in favour
+of $H_{A}$.
 
 \end{document}
