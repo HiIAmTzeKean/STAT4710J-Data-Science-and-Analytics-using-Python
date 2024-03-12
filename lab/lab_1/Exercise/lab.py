@@ -15,7 +15,7 @@ import numpy as np
 
 def consecutive_ints(ints):
     if ints == []:
-        return True
+        return False
     for i in range(len(ints)-1):
         if ints[i]==ints[i+1]+1:
             return True
@@ -28,6 +28,7 @@ def consecutive_ints(ints):
 
 
 def median_vs_mean(nums):
+    if nums ==[]: return False
     if nums[len(nums)//2] <= sum(nums)/len(nums):
         return True
     return False
